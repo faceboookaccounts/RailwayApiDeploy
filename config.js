@@ -1,4 +1,4 @@
-export const PORT = process.env.PORT || 8080;
+export const PORT = process.env.PORT || 3306;
 export const HOST = process.env.HOST || 'localhost';
 export const DB = process.env.DB || 'ApiDatabase';
 export const DB_USER = process.env.DB_USER || 'root';
