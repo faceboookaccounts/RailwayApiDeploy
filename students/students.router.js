@@ -84,9 +84,25 @@ studentRouter.delete("/alumnos/:id", async (req, res) => {
  *        - Estudiantes
  *      summary: Crear un nuevo estudiante
  *      description: Se crea un nuevo estudiante
+ *      parameters:
+ *        - name: nombre
+ *          in: formData
+ *          description: Nombre del estudiante
+ *          required: true
+ *          type: string
+ *        - name: apellido_materno
+ *          in: formData
+ *          description: Apellido materno del estudiante
+ *          required: true
+ *          type: string
+ *        - name: apellido_paterno
+ *          in: formData
+ *          description: Apellido paterno del estudiante
+ *          required: true
+ *          type: string
  *      responses:
  *        200:
- *          description: Creacion de un nuevo estudiante
+ *          description: Creación de un nuevo estudiante
  * 
  */
 
