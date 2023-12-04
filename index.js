@@ -8,7 +8,7 @@ import { SwaggerTheme } from "swagger-themes";
 import Redoc from 'redoc-express'
 
 const app = express();
-const port = 8080;
+const port = 8080 || process.env.PORT;
 const theme = new SwaggerTheme('v3')
 
 const swaggerOptions = {
@@ -19,7 +19,7 @@ const swaggerOptions = {
       version: "1.0.0",
       description: "Descripción de la API Empleados. Consulta el README.md para más detalles:\n\n",
     },
-    servers: [{ url: "http://localhost:8080" }],
+    servers: [{ url: `http://localhost:${port}` }],
     tags: [
       { name: "Estudiantes", description: "Operaciones relacionadas con estudiantes" },
     ],
