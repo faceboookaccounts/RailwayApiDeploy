@@ -8,7 +8,7 @@ import { SwaggerTheme } from "swagger-themes";
 import Redoc from 'redoc-express'
 
 const app = express();
-const port = 8080 || process.env.PORT;
+const port = process.env.PORT || 8080;
 const theme = new SwaggerTheme('v3')
 
 const swaggerOptions = {
