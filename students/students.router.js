@@ -106,7 +106,7 @@ studentRouter.delete("/alumnos/:id", async (req, res) => {
  * 
  */
 
-studentRouter.post("/alumnos/new", async (req, res) => {
+studentRouter.post("/alumnos", async (req, res) => {
   const result = await createNewStudent(req);
   res.json(result[0]);
 });

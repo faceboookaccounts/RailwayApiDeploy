@@ -23,7 +23,7 @@ export async function getStudentById(id) {
 export async function deleteStudentById(id) {
   try {
     const result = await promisePool.query(
-      "DELETE * FROM Alumno WHERE id_alumno = ?",
+      "DELETE FROM Alumno WHERE id_alumno = ?",
       [id]
     );
     return result;
