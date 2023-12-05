@@ -84,22 +84,23 @@ studentRouter.delete("/alumnos/:id", async (req, res) => {
  *        - Estudiantes
  *      summary: Crear un nuevo estudiante
  *      description: Se crea un nuevo estudiante
- *      parameters:
- *        - name: nombre
- *          in: formData
- *          description: Nombre del estudiante
- *          required: true
- *          type: string
- *        - name: apellido_materno
- *          in: formData
- *          description: Apellido materno del estudiante
- *          required: true
- *          type: string
- *        - name: apellido_paterno
- *          in: formData
- *          description: Apellido paterno del estudiante
- *          required: true
- *          type: string
+ *      requestBody:
+ *        required: true
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              properties:
+ *                nombre:
+ *                  type: string
+ *                apellido_materno:
+ *                  type: string
+ *                apellido_paterno:
+ *                  type: string
+ *              required:
+ *                - nombre
+ *                - apellido_materno
+ *                - apellido_paterno
  *      responses:
  *        200:
  *          description: Creación de un nuevo estudiante
@@ -126,21 +127,23 @@ studentRouter.post("/alumnos", async (req, res) => {
  *          description: ID del estudiante a editar
  *          schema:
  *            type: integer
- *        - in: query
- *          name: nombre
- *          description: Nuevo nombre del estudiante
- *          schema:
- *            type: string
- *        - in: query
- *          name: apellido_materno
- *          description: Nuevo apellido materno del estudiante
- *          schema:
- *            type: string
- *        - in: query
- *          name: apellido_paterno
- *          description: Nuevo apellido paterno del estudiante
- *          schema:
- *            type: string
+ *      requestBody:
+ *        required: true
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              properties:
+ *                nombre:
+ *                  type: string
+ *                apellido_materno:
+ *                  type: string
+ *                apellido_paterno:
+ *                  type: string
+ *              required:
+ *                - nombre
+ *                - apellido_materno
+ *                - apellido_paterno
  *      responses:
  *        200:
  *          description: Se edita un estudiante en específico
