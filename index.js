@@ -33,12 +33,12 @@ const options = {
   customCss: theme.getBuffer('dark')
 };
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 const swaggerDocs = swaggerJSDoc(swaggerOptions);
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs,options));
 app.use(studentRouter);
-app.use(cors());
 
 app.use('/api-docs-json', (req,res) => {
   res.json(swaggerDocs);
