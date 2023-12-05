@@ -134,6 +134,8 @@ studentRouter.post("/alumnos", async (req, res) => {
  *            schema:
  *              type: object
  *              properties:
+ *                id:
+ *                  type: integer
  *                nombre:
  *                  type: string
  *                apellido_materno:
@@ -141,6 +143,7 @@ studentRouter.post("/alumnos", async (req, res) => {
  *                apellido_paterno:
  *                  type: string
  *              required:
+ *                - id
  *                - nombre
  *                - apellido_materno
  *                - apellido_paterno
