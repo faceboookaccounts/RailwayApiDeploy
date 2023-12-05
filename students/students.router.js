@@ -78,7 +78,7 @@ studentRouter.delete("/alumnos/:id", async (req, res) => {
 
 /**
  * @swagger
- * /alumnos/new:
+ * /alumnos:
  *    post:
  *      tags:
  *        - Estudiantes
@@ -118,14 +118,32 @@ studentRouter.post("/alumnos", async (req, res) => {
  *      tags:
  *        - Estudiantes
  *      summary: Edita un estudiante por su id
- *      description: Edita un estudiante mediante su id
+ *      description: Edita un estudiante mediante su id, nombre, apellido materno y apellido paterno
  *      parameters:
  *        - in: path
  *          name: id
+ *          required: true
+ *          description: ID del estudiante a editar
+ *          schema:
+ *            type: integer
+ *        - in: query
+ *          name: nombre
+ *          description: Nuevo nombre del estudiante
+ *          schema:
+ *            type: string
+ *        - in: query
+ *          name: apellido_materno
+ *          description: Nuevo apellido materno del estudiante
+ *          schema:
+ *            type: string
+ *        - in: query
+ *          name: apellido_paterno
+ *          description: Nuevo apellido paterno del estudiante
+ *          schema:
+ *            type: string
  *      responses:
  *        200:
- *          description: Se edita un estudiante en especifico
- * 
+ *          description: Se edita un estudiante en específico
  */
 
 studentRouter.put("/alumnos/:id", async (req, res) => {
