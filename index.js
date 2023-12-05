@@ -19,7 +19,7 @@ const swaggerOptions = {
       version: "1.0.0",
       description: "Descripción de la API Empleados. Consulta el README.md para más detalles:\n\n",
     },
-    servers: [{ url: `http://localhost:${port}` }],
+    servers: [{ url: `http://https://railwayapideploy-production.up.railway.app/:${port}` }],
     tags: [
       { name: "Estudiantes", description: "Operaciones relacionadas con estudiantes" },
     ],
